@@ -889,8 +889,6 @@ team’s opponents fared in their other games and how the team then
 performed relative to that. Here you can see each team and their
 opponents average goals for and against in other games:
 
-    ## `summarise()` ungrouping output (override with `.groups` argument)
-
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1055,8 +1053,6 @@ Canada and El Salvador have excelled against the hardest schedules so
 far, while Costa Rica has struggled with the easiest. Here’s the same
 table, but with the team’s GF above opponent’s average and GA below
 opponent’s average to get a better sense of relative performance:
-
-    ## `summarise()` ungrouping output (override with `.groups` argument)
 
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
