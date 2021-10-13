@@ -23,8 +23,8 @@ team_sums <- game_stats %>%
               GA_below=mean(GA_below) %>% round(2),
               G_better=GF_above + GA_below)
 
-hfa <- game_stats %>%
-    group_by(Home) %>%
+game_stats %>%
+    group_by(Place) %>%
     summarize(GF=mean(GF),
               GA=mean(GA),
               GD=GF-GA,
