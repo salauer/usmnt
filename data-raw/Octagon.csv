@@ -1,21 +1,25 @@
-Date,Home,Away,Home Score,Away Score
-9/2,Canada,Honduras,1,1
-9/2,Panama,Costa Rica,0,0
-9/2,Mexico,Jamaica,2,1
-9/2,El Salvador,United States,0,0
-9/5,Jamaica,Panama,0,3
-9/5,El Salvador,Honduras,0,0
-9/5,Costa Rica,Mexico,0,1
-9/5,United States,Canada,1,1
-9/8,Canada,El Salvador,3,0
-9/8,Panama,Mexico,1,1
-9/8,Costa Rica,Jamaica,1,1
-9/8,Honduras,United States,1,4
-10/7,United States,Jamaica,2,0
-10/7,Honduras,Costa Rica,0,0
-10/7,Mexico,Canada,1,1
-10/7,El Salvador,Panama,1,0
-10/10,Panama,United States,1,0
-10/10,Jamaica,Canada,0,0
-10/10,Costa Rica,El Salvador,2,1
-10/10,Mexico,Honduras,3,0
+Date,Home,Away,Home Score,Away Score,Home xG,Away xG
+9/2,Canada,Honduras,1,1,,
+9/2,Panama,Costa Rica,0,0,,
+9/2,Mexico,Jamaica,2,1,,
+9/2,El Salvador,United States,0,0,1.01,1.61
+9/5,Jamaica,Panama,0,3,,
+9/5,El Salvador,Honduras,0,0,,
+9/5,Costa Rica,Mexico,0,1,,
+9/5,United States,Canada,1,1,1.29,0.76
+9/8,Canada,El Salvador,3,0,,
+9/8,Panama,Mexico,1,1,,
+9/8,Costa Rica,Jamaica,1,1,,
+9/8,Honduras,United States,1,4,1.76,1.18
+10/7,United States,Jamaica,2,0,2.48,0.75
+10/7,Honduras,Costa Rica,0,0,,
+10/7,Mexico,Canada,1,1,,
+10/7,El Salvador,Panama,1,0,,
+10/10,Panama,United States,1,0,,
+10/10,Jamaica,Canada,0,0,,
+10/10,Costa Rica,El Salvador,2,1,,
+10/10,Mexico,Honduras,3,0,,
+10/13,United States,Costa Rica,2,1,,
+10/13,Canada,Panama,4,1,,
+10/13,Honduras,Jamaica,0,2,,
+10/13,El Salvador,Mexico,0,2,,

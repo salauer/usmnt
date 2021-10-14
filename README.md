@@ -3,11 +3,18 @@
 CONCACAF has entered the Octagon, and I wanted to see which teams have
 had the hardest/easiest schedules so far and who has performed best
 relative to expectations. What follows is super basic (you can find my
-exploratory analysis code in `inst/octagon.R`).
+exploratory analysis code in `inst/octagon.R`). **I would love to do
+this analysis on xG instead of observed goals, please let me know if you
+have that data for all the games!**
+
+-   [Who Played Whom and Results](#who-played-whom-and-results)
+-   [Strength of Schedule](#strength-of-schedule)
+-   [Real Basic Result-Only Rankings](#real-basic-result-only-rankings)
+-   [Big Ugly Table](#big-ugly-table)
 
 ### Who Played Whom and Results
 
-With 8 teams each playing 5 games so far, it’s hard to understand
+With 8 teams each playing 6 games so far, it’s hard to understand
 everything that has happened so far looking at the traditional
 schedule/results format. Sometimes you just want to see who everyone has
 played and the scores. That’s what we’ve got here, with each game
@@ -149,29 +156,55 @@ Away
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Canada
+</td>
+<td style="text-align:left;">
+Jamaica
+</td>
+<td style="text-align:left;">
+Away
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Canada
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Jamaica
+Panama
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Away
+Home
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-0
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-0
+4
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 1
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+3
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+3
 </td>
 </tr>
 <tr>
@@ -279,29 +312,55 @@ Away
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Costa Rica
+</td>
+<td style="text-align:left;">
+El Salvador
+</td>
+<td style="text-align:left;">
+Home
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Costa Rica
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-El Salvador
+United States
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Home
+Away
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+1
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1
+-1
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-3
+0
 </td>
 </tr>
 <tr>
@@ -409,26 +468,52 @@ Home
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+El Salvador
+</td>
+<td style="text-align:left;">
+Costa Rica
+</td>
+<td style="text-align:left;">
+Away
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+-1
+</td>
+<td style="text-align:center;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 El Salvador
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Costa Rica
+Mexico
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Away
+Home
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1
+0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--1
+-2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 0
@@ -539,26 +624,52 @@ Home
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Honduras
+</td>
+<td style="text-align:left;">
+Mexico
+</td>
+<td style="text-align:left;">
+Away
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+-3
+</td>
+<td style="text-align:center;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Honduras
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Mexico
+Jamaica
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Away
+Home
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-3
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--3
+-2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 0
@@ -669,29 +780,55 @@ Away
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Jamaica
+</td>
+<td style="text-align:left;">
+Canada
+</td>
+<td style="text-align:left;">
+Home
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Jamaica
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Canada
+Honduras
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Home
+Away
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-1
+3
 </td>
 </tr>
 <tr>
@@ -799,26 +936,52 @@ Home
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Mexico
+</td>
+<td style="text-align:left;">
+Honduras
+</td>
+<td style="text-align:left;">
+Home
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Mexico
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Honduras
+El Salvador
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Home
+Away
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-3
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-3
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 3
@@ -929,29 +1092,55 @@ Away
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Panama
+</td>
+<td style="text-align:left;">
+United States
+</td>
+<td style="text-align:left;">
+Home
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Panama
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-United States
+Canada
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Home
+Away
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 1
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+4
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+-3
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 0
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-1
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-3
 </td>
 </tr>
 <tr>
@@ -1059,39 +1248,66 @@ Home
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+United States
+</td>
+<td style="text-align:left;">
+Panama
+</td>
+<td style="text-align:left;">
+Away
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+-1
+</td>
+<td style="text-align:center;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 United States
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Panama
+Costa Rica
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Away
+Home
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 1
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--1
+1
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
+3
 </td>
 </tr>
 </tbody>
 </table>
 
-## Kinda Advanced Stats
+## Strength of Schedule
 
 To figure out who has played the hardest slate so far, I look at how a
 team’s opponents fared in their other games and how the team then
-performed relative to that. Here you can see each team and their
+performed relative to that. This does not yet account for number of
+home/away matches by each nation. Here you can see each team and their
 opponents average goals for and against in other games:
 
 <table class="table" style="margin-left: auto; margin-right: auto;">
@@ -1117,50 +1333,16 @@ Points
 <tbody>
 <tr>
 <td style="text-align:left;">
-Jamaica
-</td>
-<td style="text-align:center;">
-1.05
-</td>
-<td style="text-align:center;">
-0.60
-</td>
-<td style="text-align:center;">
-0.45
-</td>
-<td style="text-align:center;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Honduras
-</td>
-<td style="text-align:center;">
-0.90
-</td>
-<td style="text-align:center;">
-0.75
-</td>
-<td style="text-align:center;">
-0.15
-</td>
-<td style="text-align:center;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Panama
 </td>
 <td style="text-align:center;">
-1.00
+1.10
 </td>
 <td style="text-align:center;">
-0.85
+0.83
 </td>
 <td style="text-align:center;">
-0.15
+0.27
 </td>
 <td style="text-align:center;">
 8
@@ -1168,16 +1350,16 @@ Panama
 </tr>
 <tr>
 <td style="text-align:left;">
-El Salvador
+Jamaica
 </td>
 <td style="text-align:center;">
-0.90
+1.10
 </td>
 <td style="text-align:center;">
-0.85
+0.93
 </td>
 <td style="text-align:center;">
-0.05
+0.17
 </td>
 <td style="text-align:center;">
 5
@@ -1185,19 +1367,19 @@ El Salvador
 </tr>
 <tr>
 <td style="text-align:left;">
-Mexico
+El Salvador
 </td>
 <td style="text-align:center;">
-0.75
+1.13
 </td>
 <td style="text-align:center;">
-0.80
+1.00
 </td>
 <td style="text-align:center;">
--0.05
+0.13
 </td>
 <td style="text-align:center;">
-11
+5
 </td>
 </tr>
 <tr>
@@ -1205,33 +1387,50 @@ Mexico
 Canada
 </td>
 <td style="text-align:center;">
-0.90
+0.97
 </td>
 <td style="text-align:center;">
-1.05
+0.93
 </td>
 <td style="text-align:center;">
--0.15
+0.03
 </td>
 <td style="text-align:center;">
-7
+10
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-United States
+Honduras
 </td>
 <td style="text-align:center;">
-0.70
+0.97
 </td>
 <td style="text-align:center;">
-0.95
+0.97
 </td>
 <td style="text-align:center;">
--0.25
+0.00
 </td>
 <td style="text-align:center;">
-8
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mexico
+</td>
+<td style="text-align:center;">
+0.83
+</td>
+<td style="text-align:center;">
+1.00
+</td>
+<td style="text-align:center;">
+-0.17
+</td>
+<td style="text-align:center;">
+14
 </td>
 </tr>
 <tr>
@@ -1239,24 +1438,43 @@ United States
 Costa Rica
 </td>
 <td style="text-align:center;">
-0.80
+0.93
 </td>
 <td style="text-align:center;">
-1.15
+1.13
 </td>
 <td style="text-align:center;">
--0.35
+-0.20
 </td>
 <td style="text-align:center;">
 6
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+United States
+</td>
+<td style="text-align:center;">
+0.80
+</td>
+<td style="text-align:center;">
+1.03
+</td>
+<td style="text-align:center;">
+-0.23
+</td>
+<td style="text-align:center;">
+11
+</td>
+</tr>
 </tbody>
 </table>
 
-Jamaica and Honduras have had the hardest schedules (by virtue of not
-playing themselves or each other). Costa Rica and the US have had the
-easiest.
+Panama has played the hardest schedule with only Honduras remaining
+before the second set of games. The US has the easiest schedule as they
+have not yet played Mexico.
+
+## Real Basic Result-Only Rankings
 
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -1290,25 +1508,77 @@ Points
 <tbody>
 <tr>
 <td style="text-align:left;">
+Canada
+</td>
+<td style="text-align:center;">
+0.97
+</td>
+<td style="text-align:center;">
+0.93
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.73
+</td>
+<td style="text-align:center;">
+0.30
+</td>
+<td style="text-align:center;">
+1.03
+</td>
+<td style="text-align:center;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 Mexico
 </td>
 <td style="text-align:center;">
-0.75
+0.83
+</td>
+<td style="text-align:center;">
+1.00
+</td>
+<td style="text-align:center;">
+-0.17
+</td>
+<td style="text-align:center;">
+0.67
+</td>
+<td style="text-align:center;">
+0.33
+</td>
+<td style="text-align:center;">
+1.00
+</td>
+<td style="text-align:center;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+United States
 </td>
 <td style="text-align:center;">
 0.80
 </td>
 <td style="text-align:center;">
--0.05
+1.03
 </td>
 <td style="text-align:center;">
-0.80
+-0.23
 </td>
 <td style="text-align:center;">
-0.15
+0.47
 </td>
 <td style="text-align:center;">
-0.95
+0.13
+</td>
+<td style="text-align:center;">
+0.60
 </td>
 <td style="text-align:center;">
 11
@@ -1319,77 +1589,25 @@ Mexico
 Panama
 </td>
 <td style="text-align:center;">
-1.00
+1.10
 </td>
 <td style="text-align:center;">
-0.85
+0.83
 </td>
 <td style="text-align:center;">
-0.15
+0.27
 </td>
 <td style="text-align:center;">
-0.15
-</td>
-<td style="text-align:center;">
-0.60
-</td>
-<td style="text-align:center;">
-0.75
-</td>
-<td style="text-align:center;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-United States
-</td>
-<td style="text-align:center;">
-0.70
-</td>
-<td style="text-align:center;">
-0.95
-</td>
-<td style="text-align:center;">
--0.25
-</td>
-<td style="text-align:center;">
-0.45
+0.17
 </td>
 <td style="text-align:center;">
 0.10
 </td>
 <td style="text-align:center;">
-0.55
+0.27
 </td>
 <td style="text-align:center;">
 8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Canada
-</td>
-<td style="text-align:center;">
-0.90
-</td>
-<td style="text-align:center;">
-1.05
-</td>
-<td style="text-align:center;">
--0.15
-</td>
-<td style="text-align:center;">
-0.15
-</td>
-<td style="text-align:center;">
-0.30
-</td>
-<td style="text-align:center;">
-0.45
-</td>
-<td style="text-align:center;">
-7
 </td>
 </tr>
 <tr>
@@ -1397,22 +1615,22 @@ Canada
 Costa Rica
 </td>
 <td style="text-align:center;">
-0.80
+0.93
 </td>
 <td style="text-align:center;">
-1.15
+1.13
 </td>
 <td style="text-align:center;">
--0.35
+-0.20
 </td>
 <td style="text-align:center;">
--0.55
+-0.47
 </td>
 <td style="text-align:center;">
-0.20
+0.10
 </td>
 <td style="text-align:center;">
--0.35
+-0.37
 </td>
 <td style="text-align:center;">
 6
@@ -1420,25 +1638,25 @@ Costa Rica
 </tr>
 <tr>
 <td style="text-align:left;">
-El Salvador
+Jamaica
 </td>
 <td style="text-align:center;">
-0.90
+1.10
 </td>
 <td style="text-align:center;">
-0.85
+0.93
 </td>
 <td style="text-align:center;">
-0.05
+0.17
 </td>
 <td style="text-align:center;">
--0.45
+-0.27
 </td>
 <td style="text-align:center;">
--0.10
+-0.23
 </td>
 <td style="text-align:center;">
--0.55
+-0.50
 </td>
 <td style="text-align:center;">
 5
@@ -1446,28 +1664,28 @@ El Salvador
 </tr>
 <tr>
 <td style="text-align:left;">
-Jamaica
+El Salvador
 </td>
 <td style="text-align:center;">
-1.05
+1.13
 </td>
 <td style="text-align:center;">
-0.60
+1.00
 </td>
 <td style="text-align:center;">
-0.45
+0.13
 </td>
 <td style="text-align:center;">
--0.20
+-0.67
 </td>
 <td style="text-align:center;">
--0.55
+-0.03
 </td>
 <td style="text-align:center;">
--0.75
+-0.70
 </td>
 <td style="text-align:center;">
-2
+5
 </td>
 </tr>
 <tr>
@@ -1475,22 +1693,22 @@ Jamaica
 Honduras
 </td>
 <td style="text-align:center;">
-0.90
+0.97
 </td>
 <td style="text-align:center;">
-0.75
+0.97
 </td>
 <td style="text-align:center;">
-0.15
+0.00
 </td>
 <td style="text-align:center;">
--0.35
+-0.63
 </td>
 <td style="text-align:center;">
 -0.70
 </td>
 <td style="text-align:center;">
--1.05
+-1.33
 </td>
 <td style="text-align:center;">
 3
@@ -1499,8 +1717,12 @@ Honduras
 </tbody>
 </table>
 
-Mexico has risen to the top and the top 4 teams by points have performed
-the best relative to their schedules.
+Canada and Mexico are virtually tied at the top of the table after
+Canada’s big win over Panama, which was the largest over expectation of
+any match to date. El Salvador has plummeted from top 4 to bottom 2 in
+the last three games.
+
+### Big Ugly Table
 
 Here’s a big ugly table with all of the stats for all of the games, if
 you’re interested:
@@ -1576,22 +1798,22 @@ Home
 0
 </td>
 <td style="text-align:center;">
-0.25
+0.2
 </td>
 <td style="text-align:center;">
-1.75
+1.8
 </td>
 <td style="text-align:center;">
--1.50
+-1.6
 </td>
 <td style="text-align:center;">
--0.75
+-0.8
 </td>
 <td style="text-align:center;">
--0.75
+-0.8
 </td>
 <td style="text-align:left;">
--1.50
+-1.6
 </td>
 <td style="text-align:left;">
 1
@@ -1620,22 +1842,22 @@ Away
 0
 </td>
 <td style="text-align:center;">
-1.50
+1.6
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
-1.00
+1.0
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:left;">
-1.00
+1.0
 </td>
 <td style="text-align:left;">
 1
@@ -1664,22 +1886,22 @@ Home
 3
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-0.50
+0.8
 </td>
 <td style="text-align:center;">
-0.00
+-0.4
 </td>
 <td style="text-align:center;">
-2.50
+2.2
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:left;">
-3.00
+2.6
 </td>
 <td style="text-align:left;">
 3
@@ -1708,22 +1930,66 @@ Away
 0
 </td>
 <td style="text-align:center;">
-1.75
+1.8
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-1.25
+1.4
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:left;">
-1.25
+1.4
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-10-10
+</td>
+<td style="text-align:left;">
+Canada
+</td>
+<td style="text-align:left;">
+Jamaica
+</td>
+<td style="text-align:left;">
+Away
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0.8
+</td>
+<td style="text-align:center;">
+1.6
+</td>
+<td style="text-align:center;">
+-0.8
+</td>
+<td style="text-align:center;">
+-1.6
+</td>
+<td style="text-align:center;">
+0.8
+</td>
+<td style="text-align:left;">
+-0.8
 </td>
 <td style="text-align:left;">
 1
@@ -1731,46 +1997,46 @@ Away
 </tr>
 <tr>
 <td style="text-align:left;border-bottom: 1px solid">
-2021-10-10
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Canada
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Jamaica
+Panama
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Away
+Home
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
+4
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-0
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-0.50
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-2.00
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
--1.50
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
--2.00
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-0.50
-</td>
-<td style="text-align:left;border-bottom: 1px solid">
--1.50
-</td>
-<td style="text-align:left;border-bottom: 1px solid">
 1
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+3
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+1.0
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+0.4
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+0.6
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+3.6
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+0.0
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+3.6
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+3
 </td>
 </tr>
 <tr>
@@ -1796,22 +2062,22 @@ Away
 0
 </td>
 <td style="text-align:center;">
-1.25
+1.2
 </td>
 <td style="text-align:center;">
-0.50
+1.2
 </td>
 <td style="text-align:center;">
-0.75
+0.0
 </td>
 <td style="text-align:center;">
--0.50
+-1.2
 </td>
 <td style="text-align:center;">
-1.25
+1.2
 </td>
 <td style="text-align:left;">
-0.75
+0.0
 </td>
 <td style="text-align:left;">
 1
@@ -1840,22 +2106,22 @@ Home
 -1
 </td>
 <td style="text-align:center;">
-1.75
+1.8
 </td>
 <td style="text-align:center;">
-0.75
+0.6
 </td>
 <td style="text-align:center;">
-1.00
+1.2
 </td>
 <td style="text-align:center;">
--0.75
+-0.6
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:left;">
-0.00
+0.2
 </td>
 <td style="text-align:left;">
 0
@@ -1884,22 +2150,22 @@ Home
 0
 </td>
 <td style="text-align:center;">
-0.25
+0.6
 </td>
 <td style="text-align:center;">
-1.75
+1.4
 </td>
 <td style="text-align:center;">
--1.50
+-0.8
 </td>
 <td style="text-align:center;">
--0.75
+-0.4
 </td>
 <td style="text-align:center;">
--0.75
+-0.4
 </td>
 <td style="text-align:left;">
--1.50
+-0.8
 </td>
 <td style="text-align:left;">
 1
@@ -1928,69 +2194,113 @@ Away
 0
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-2.00
+2.0
 </td>
 <td style="text-align:center;">
--1.50
+-1.6
 </td>
 <td style="text-align:center;">
--2.00
+-2.0
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:left;">
--1.50
+-1.6
 </td>
 <td style="text-align:left;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Costa Rica
+</td>
+<td style="text-align:left;">
+El Salvador
+</td>
+<td style="text-align:left;">
+Home
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0.2
+</td>
+<td style="text-align:center;">
+1.0
+</td>
+<td style="text-align:center;">
+-0.8
+</td>
+<td style="text-align:center;">
+1.0
+</td>
+<td style="text-align:center;">
+-0.8
+</td>
+<td style="text-align:left;">
+0.2
+</td>
+<td style="text-align:left;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Costa Rica
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-El Salvador
+United States
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Home
+Away
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+1
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1
+-1
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1
+1.4
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.25
+0.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.75
+0.8
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--0.50
+0.4
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1.25
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
--0.75
+-0.6
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-0.50
+-0.2
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-3
+0
 </td>
 </tr>
 <tr>
@@ -2016,22 +2326,22 @@ Home
 0
 </td>
 <td style="text-align:center;">
-1.75
+1.8
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:center;">
-1.00
+1.0
 </td>
 <td style="text-align:center;">
--0.75
+-0.8
 </td>
 <td style="text-align:center;">
-1.75
+1.8
 </td>
 <td style="text-align:left;">
-1.00
+1.0
 </td>
 <td style="text-align:left;">
 1
@@ -2060,22 +2370,22 @@ Home
 0
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-2.00
+2.0
 </td>
 <td style="text-align:center;">
--1.50
+-1.6
 </td>
 <td style="text-align:center;">
--2.00
+-2.0
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:left;">
--1.50
+-1.6
 </td>
 <td style="text-align:left;">
 1
@@ -2104,22 +2414,22 @@ Away
 -3
 </td>
 <td style="text-align:center;">
-0.75
+1.4
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:center;">
-0.00
+0.6
 </td>
 <td style="text-align:center;">
--0.75
+-0.8
 </td>
 <td style="text-align:center;">
--2.25
+-1.6
 </td>
 <td style="text-align:left;">
--3.00
+-2.4
 </td>
 <td style="text-align:left;">
 0
@@ -2148,66 +2458,110 @@ Home
 1
 </td>
 <td style="text-align:center;">
-1.25
+1.2
 </td>
 <td style="text-align:center;">
-0.25
+1.0
 </td>
 <td style="text-align:center;">
-1.00
+0.2
 </td>
 <td style="text-align:center;">
-0.75
+0.0
 </td>
 <td style="text-align:center;">
-1.25
+1.2
 </td>
 <td style="text-align:left;">
-2.00
+1.2
 </td>
 <td style="text-align:left;">
 3
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+El Salvador
+</td>
+<td style="text-align:left;">
+Costa Rica
+</td>
+<td style="text-align:left;">
+Away
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+-1
+</td>
+<td style="text-align:center;">
+0.4
+</td>
+<td style="text-align:center;">
+0.8
+</td>
+<td style="text-align:center;">
+-0.4
+</td>
+<td style="text-align:center;">
+0.2
+</td>
+<td style="text-align:center;">
+-1.6
+</td>
+<td style="text-align:left;">
+-1.4
+</td>
+<td style="text-align:left;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 El Salvador
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Costa Rica
+Mexico
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Away
+Home
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1
+0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--1
+-2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.25
+1.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.50
+0.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--0.25
+1.0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.50
+-0.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--1.75
+-0.4
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
--1.25
+-1.0
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 0
@@ -2236,22 +2590,22 @@ Away
 0
 </td>
 <td style="text-align:center;">
-1.25
+1.8
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
-0.75
+1.2
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-0.25
+0.8
 </td>
 <td style="text-align:left;">
-0.75
+1.2
 </td>
 <td style="text-align:left;">
 1
@@ -2280,22 +2634,22 @@ Away
 0
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-1.25
+1.4
 </td>
 <td style="text-align:center;">
--0.75
+-1.0
 </td>
 <td style="text-align:center;">
--1.25
+-1.4
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:left;">
--0.75
+-1.0
 </td>
 <td style="text-align:left;">
 1
@@ -2324,22 +2678,22 @@ Home
 -3
 </td>
 <td style="text-align:center;">
-0.75
+1.0
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
-0.25
+0.4
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
--3.25
+-3.0
 </td>
 <td style="text-align:left;">
--2.75
+-2.6
 </td>
 <td style="text-align:left;">
 0
@@ -2368,66 +2722,110 @@ Home
 0
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:center;">
-0.75
+1.0
 </td>
 <td style="text-align:center;">
-0.00
+-0.2
 </td>
 <td style="text-align:center;">
--0.75
+-1.0
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:left;">
-0.00
+-0.2
 </td>
 <td style="text-align:left;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Honduras
+</td>
+<td style="text-align:left;">
+Mexico
+</td>
+<td style="text-align:left;">
+Away
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+-3
+</td>
+<td style="text-align:center;">
+1.4
+</td>
+<td style="text-align:center;">
+0.6
+</td>
+<td style="text-align:center;">
+0.8
+</td>
+<td style="text-align:center;">
+-0.6
+</td>
+<td style="text-align:center;">
+-1.6
+</td>
+<td style="text-align:left;">
+-2.2
+</td>
+<td style="text-align:left;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Honduras
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Mexico
+Jamaica
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Away
+Home
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-3
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--3
+-2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1.25
+0.4
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.75
+1.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.50
+-1.2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--0.75
+-1.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--1.75
+-1.6
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
--2.50
+-3.2
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 0
@@ -2456,22 +2854,22 @@ Away
 -1
 </td>
 <td style="text-align:center;">
-1.50
+1.6
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-1.00
+1.2
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
--0.50
+-0.4
 </td>
 <td style="text-align:left;">
-0.00
+0.2
 </td>
 <td style="text-align:left;">
 0
@@ -2500,22 +2898,22 @@ Home
 -3
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
-0.50
+1.2
 </td>
 <td style="text-align:center;">
-0.00
+-0.6
 </td>
 <td style="text-align:center;">
--0.50
+-1.2
 </td>
 <td style="text-align:center;">
--2.50
+-2.4
 </td>
 <td style="text-align:left;">
--3.00
+-3.6
 </td>
 <td style="text-align:left;">
 0
@@ -2544,22 +2942,22 @@ Away
 0
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
-0.50
+0.8
 </td>
 <td style="text-align:center;">
-0.00
+-0.2
 </td>
 <td style="text-align:center;">
-0.50
+0.2
 </td>
 <td style="text-align:center;">
--0.50
+-0.4
 </td>
 <td style="text-align:left;">
-0.00
+-0.2
 </td>
 <td style="text-align:left;">
 1
@@ -2588,69 +2986,113 @@ Away
 -2
 </td>
 <td style="text-align:center;">
-1.25
+1.4
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
--0.75
+-0.8
 </td>
 <td style="text-align:center;">
--0.75
+-0.6
 </td>
 <td style="text-align:left;">
--1.50
+-1.4
 </td>
 <td style="text-align:left;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Jamaica
+</td>
+<td style="text-align:left;">
+Canada
+</td>
+<td style="text-align:left;">
+Home
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+2.0
+</td>
+<td style="text-align:center;">
+0.8
+</td>
+<td style="text-align:center;">
+1.2
+</td>
+<td style="text-align:center;">
+-0.8
+</td>
+<td style="text-align:center;">
+2.0
+</td>
+<td style="text-align:left;">
+1.2
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Jamaica
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Canada
+Honduras
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Home
+Away
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
+0.4
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1.50
+1.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.75
+-1.2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.75
+0.4
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--0.75
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-1.50
+0.4
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-0.75
+0.8
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-1
+3
 </td>
 </tr>
 <tr>
@@ -2676,22 +3118,22 @@ Home
 1
 </td>
 <td style="text-align:center;">
-0.25
+0.6
 </td>
 <td style="text-align:center;">
-1.50
+1.2
 </td>
 <td style="text-align:center;">
--1.25
+-0.6
 </td>
 <td style="text-align:center;">
-0.50
+0.8
 </td>
 <td style="text-align:center;">
--0.75
+-0.4
 </td>
 <td style="text-align:left;">
--0.25
+0.4
 </td>
 <td style="text-align:left;">
 3
@@ -2720,22 +3162,22 @@ Away
 1
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:center;">
-0.50
+0.8
 </td>
 <td style="text-align:center;">
-0.25
+0.0
 </td>
 <td style="text-align:center;">
-0.50
+0.2
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:left;">
-1.25
+1.0
 </td>
 <td style="text-align:left;">
 3
@@ -2764,22 +3206,22 @@ Away
 0
 </td>
 <td style="text-align:center;">
-1.00
+1.0
 </td>
 <td style="text-align:center;">
-0.25
+1.0
 </td>
 <td style="text-align:center;">
-0.75
+0.0
 </td>
 <td style="text-align:center;">
-0.75
+0.0
 </td>
 <td style="text-align:center;">
-0.00
+0.0
 </td>
 <td style="text-align:left;">
-0.75
+0.0
 </td>
 <td style="text-align:left;">
 1
@@ -2808,66 +3250,110 @@ Home
 0
 </td>
 <td style="text-align:center;">
-1.25
+1.8
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
-0.75
+1.2
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-0.25
+0.8
 </td>
 <td style="text-align:left;">
-0.75
+1.2
 </td>
 <td style="text-align:left;">
 1
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Mexico
+</td>
+<td style="text-align:left;">
+Honduras
+</td>
+<td style="text-align:left;">
+Home
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+0.4
+</td>
+<td style="text-align:center;">
+1.4
+</td>
+<td style="text-align:center;">
+-1.0
+</td>
+<td style="text-align:center;">
+1.6
+</td>
+<td style="text-align:center;">
+0.4
+</td>
+<td style="text-align:left;">
+2.0
+</td>
+<td style="text-align:left;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Mexico
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Honduras
+El Salvador
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Home
+Away
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-3
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-3
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.50
+0.4
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1.25
+1.0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--0.75
+-0.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1.75
+1.0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.50
+0.4
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-2.25
+1.4
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 3
@@ -2896,22 +3382,22 @@ Home
 0
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:center;">
-0.75
+1.0
 </td>
 <td style="text-align:center;">
-0.00
+-0.2
 </td>
 <td style="text-align:center;">
--0.75
+-1.0
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:left;">
-0.00
+-0.2
 </td>
 <td style="text-align:left;">
 1
@@ -2940,22 +3426,22 @@ Away
 3
 </td>
 <td style="text-align:center;">
-0.50
+0.8
 </td>
 <td style="text-align:center;">
-1.25
+1.0
 </td>
 <td style="text-align:center;">
--0.75
+-0.2
 </td>
 <td style="text-align:center;">
-1.75
+2.0
 </td>
 <td style="text-align:center;">
-0.50
+0.8
 </td>
 <td style="text-align:left;">
-2.25
+2.8
 </td>
 <td style="text-align:left;">
 3
@@ -2984,22 +3470,22 @@ Home
 0
 </td>
 <td style="text-align:center;">
-1.75
+1.8
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-1.25
+1.4
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
-0.75
+0.8
 </td>
 <td style="text-align:left;">
-1.25
+1.4
 </td>
 <td style="text-align:left;">
 1
@@ -3028,69 +3514,113 @@ Away
 -1
 </td>
 <td style="text-align:center;">
-0.25
+0.2
 </td>
 <td style="text-align:center;">
-1.25
+1.4
 </td>
 <td style="text-align:center;">
--1.00
+-1.2
 </td>
 <td style="text-align:center;">
--1.25
+-1.4
 </td>
 <td style="text-align:center;">
--0.75
+-0.8
 </td>
 <td style="text-align:left;">
--2.00
+-2.2
 </td>
 <td style="text-align:left;">
 0
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+Panama
+</td>
+<td style="text-align:left;">
+United States
+</td>
+<td style="text-align:left;">
+Home
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1.8
+</td>
+<td style="text-align:center;">
+0.6
+</td>
+<td style="text-align:center;">
+1.2
+</td>
+<td style="text-align:center;">
+0.4
+</td>
+<td style="text-align:center;">
+1.8
+</td>
+<td style="text-align:left;">
+2.2
+</td>
+<td style="text-align:left;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 Panama
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-United States
+Canada
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Home
+Away
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 1
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
+4
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+-3
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+1.2
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+0.6
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+0.6
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+0.4
+</td>
+<td style="text-align:center;border-bottom: 1px solid">
+-2.8
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+-2.4
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
 0
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-1
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-1.75
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-0.50
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-1.25
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-0.50
-</td>
-<td style="text-align:center;border-bottom: 1px solid">
-1.75
-</td>
-<td style="text-align:left;border-bottom: 1px solid">
-2.25
-</td>
-<td style="text-align:left;border-bottom: 1px solid">
-3
 </td>
 </tr>
 <tr>
@@ -3116,22 +3646,22 @@ Away
 0
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-1.25
+1.4
 </td>
 <td style="text-align:center;">
--0.75
+-1.0
 </td>
 <td style="text-align:center;">
--1.25
+-1.4
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:left;">
--0.75
+-1.0
 </td>
 <td style="text-align:left;">
 1
@@ -3160,22 +3690,22 @@ Home
 0
 </td>
 <td style="text-align:center;">
-1.25
+1.8
 </td>
 <td style="text-align:center;">
-0.50
+0.6
 </td>
 <td style="text-align:center;">
-0.75
+1.2
 </td>
 <td style="text-align:center;">
-0.50
+0.4
 </td>
 <td style="text-align:center;">
-0.25
+0.8
 </td>
 <td style="text-align:left;">
-0.75
+1.2
 </td>
 <td style="text-align:left;">
 1
@@ -3204,22 +3734,22 @@ Away
 3
 </td>
 <td style="text-align:center;">
-0.25
+0.2
 </td>
 <td style="text-align:center;">
-1.00
+1.2
 </td>
 <td style="text-align:center;">
--0.75
+-1.0
 </td>
 <td style="text-align:center;">
-3.00
+2.8
 </td>
 <td style="text-align:center;">
--0.75
+-0.8
 </td>
 <td style="text-align:left;">
-2.25
+2.0
 </td>
 <td style="text-align:left;">
 3
@@ -3248,69 +3778,113 @@ Home
 2
 </td>
 <td style="text-align:center;">
-0.50
+0.8
 </td>
 <td style="text-align:center;">
-1.50
+1.2
 </td>
 <td style="text-align:center;">
--1.00
+-0.4
 </td>
 <td style="text-align:center;">
-0.50
+0.8
 </td>
 <td style="text-align:center;">
-0.50
+0.8
 </td>
 <td style="text-align:left;">
-1.00
+1.6
 </td>
 <td style="text-align:left;">
 3
 </td>
 </tr>
 <tr>
-<td style="text-align:left;border-bottom: 1px solid">
+<td style="text-align:left;">
 2021-10-10
+</td>
+<td style="text-align:left;">
+United States
+</td>
+<td style="text-align:left;">
+Panama
+</td>
+<td style="text-align:left;">
+Away
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+-1
+</td>
+<td style="text-align:center;">
+1.0
+</td>
+<td style="text-align:center;">
+1.2
+</td>
+<td style="text-align:center;">
+-0.2
+</td>
+<td style="text-align:center;">
+-1.2
+</td>
+<td style="text-align:center;">
+0.0
+</td>
+<td style="text-align:left;">
+-1.2
+</td>
+<td style="text-align:left;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+2021-10-13
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 United States
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Panama
+Costa Rica
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-Away
+Home
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0
+2
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
 1
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--1
+1
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-1.00
+0.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.50
+0.6
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.50
+0.0
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
--0.50
+1.4
 </td>
 <td style="text-align:center;border-bottom: 1px solid">
-0.00
+-0.4
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
--0.50
+1.0
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-0
+3
 </td>
 </tr>
 </tbody>

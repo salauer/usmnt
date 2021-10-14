@@ -1,17 +1,33 @@
 library(dplyr)
 library(tidyr)
+
 game_dat <- read.csv("data-raw/Octagon.csv")
 
 game_stats <- game_dat %>%
-    transmute(Date, Team=Home, Opp=Away, Home=T, GF=Home.Score, GA=Away.Score) %>%
+    transmute(Date=lubridate::ymd(paste0("2021/", Date)),
+              Team=Home,
+              Opp=Away,
+              Place="Home",
+              GF=Home.Score,
+              GA=Away.Score) %>%
     bind_rows(game_dat %>%
-                  transmute(Date, Team=Away, Opp=Home, Home=F, GF=Away.Score, GA=Home.Score)) %>%
+                  transmute(Date=lubridate::ymd(paste0("2021/", Date)),
+                            Team=Away,
+                            Opp=Home,
+                            Place="Away",
+                            GF=Away.Score,
+                            GA=Home.Score)) %>%
     group_by(Opp) %>%
-    mutate(Opp_GFpg=(sum(GA) - GA)/(n() - 1),
-           Opp_GApg=(sum(GF) - GF)/(n() - 1)) %>%
+    mutate(GD=GF-GA,
+           Opp_GFpg=(sum(GA) - GA)/(n() - 1),
+           Opp_GApg=(sum(GF) - GF)/(n() - 1),
+           Opp_GDpg=Opp_GFpg-Opp_GApg) %>%
     ungroup() %>%
     mutate(GF_above=GF-Opp_GApg,
-           GA_below=Opp_GFpg-GA)
+           GA_below=Opp_GFpg-GA,
+           G_better=GF_above + GA_below,
+           Points=ifelse(GF > GA, 3,
+                         ifelse(GF==GA, 1, 0)))
 
 
 team_sums <- game_stats %>%

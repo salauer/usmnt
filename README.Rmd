@@ -1,0 +1,171 @@
+---
+title: "README"
+author: "Stephen Lauer"
+date: "`r Sys.Date()`"
+output: md_document
+always_allow_html: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r library, include=FALSE}
+library(dplyr)
+library(tidyr)
+library(kableExtra)
+
+game_dat <- read.csv("data-raw/Octagon.csv")
+
+game_stats <- game_dat %>%
+    transmute(Date=lubridate::ymd(paste0("2021/", Date)),
+              Team=Home,
+              Opp=Away,
+              Place="Home",
+              GF=Home.Score,
+              GA=Away.Score) %>%
+    bind_rows(game_dat %>%
+                  transmute(Date=lubridate::ymd(paste0("2021/", Date)),
+                            Team=Away,
+                            Opp=Home,
+                            Place="Away",
+                            GF=Away.Score,
+                            GA=Home.Score)) %>%
+    group_by(Opp) %>%
+    mutate(GD=GF-GA,
+           Opp_GFpg=(sum(GA) - GA)/(n() - 1),
+           Opp_GApg=(sum(GF) - GF)/(n() - 1),
+           Opp_GDpg=Opp_GFpg-Opp_GApg) %>%
+    ungroup() %>%
+    mutate(GF_above=GF-Opp_GApg,
+           GA_below=Opp_GFpg-GA,
+           G_better=GF_above + GA_below,
+           Points=ifelse(GF > GA, 3,
+                         ifelse(GF==GA, 1, 0)))
+
+GP <- game_stats %>% filter(Team=="United States") %>% nrow()
+
+```
+
+## USMNT Octagon
+
+CONCACAF has entered the Octagon, and I wanted to see which teams have had the hardest/easiest schedules so far and who has performed best relative to expectations.
+What follows is super basic (you can find my exploratory analysis code in `inst/octagon.R`).
+**I would love to do this analysis on xG instead of observed goals, please let me know if you have that data for all the games!**
+
+* [Who Played Whom and Results](#who-played-whom-and-results)
+* [Strength of Schedule](#strength-of-schedule)
+* [Real Basic Result-Only Rankings](#real-basic-result-only-rankings)
+* [Big Ugly Table](#big-ugly-table)
+
+### Who Played Whom and Results
+
+With 8 teams each playing `r GP` games so far, it's hard to understand everything that has happened so far looking at the traditional schedule/results format.
+Sometimes you just want to see who everyone has played and the scores.
+That's what we've got here, with each game represented twice, with both the home team and away team in the `Team` column:
+
+```{r game-results, message=FALSE, warning=FALSE}
+game_stats %>% 
+    arrange(Team, Date) %>% 
+    select(Date, Team, Opponent=Opp, Place, GF, GA, GD, Points) %>% 
+    kable(format="html", booktabs=T, align="llllcccc") %>% 
+    kable_styling() %>% 
+    row_spec(seq(GP, nrow(game_stats), GP), extra_css="border-bottom: 1px solid")
+```
+
+## Strength of Schedule
+
+To figure out who has played the hardest slate so far, I look at how a team's opponents fared in their other games and how the team then performed relative to that.
+This does not yet account for number of home/away matches by each nation.
+Here you can see each team and their opponents average goals for and against in other games:
+
+```{r team-summaries, message=FALSE, warning=FALSE}
+game_stats %>%
+    group_by(Team) %>%
+    summarize(Opp_GF=mean(Opp_GFpg),
+              Opp_GA=mean(Opp_GApg),
+              Opp_GD=Opp_GF-Opp_GA,
+              Points=sum(Points)) %>% 
+    arrange(desc(Opp_GD)) %>% 
+    rename(`Opp Avg GF`=Opp_GF,
+           `Opp Avg GA`=Opp_GA,
+           `Opp Avg GD`=Opp_GD) %>% 
+    kable(format="html", digits=2, booktabs=T, align="lcccc") %>% 
+    kable_styling()
+```
+
+Panama has played the hardest schedule with only Honduras remaining before the second set of games.
+The US has the easiest schedule as they have not yet played Mexico.
+
+## Real Basic Result-Only Rankings
+
+```{r team-summaries2, message=FALSE, warning=FALSE}
+game_stats %>%
+    group_by(Team) %>%
+    summarize(Opp_GF=mean(Opp_GFpg),
+              Opp_GA=mean(Opp_GApg),
+              Opp_GD=Opp_GF-Opp_GA,
+              GF_above=mean(GF_above),
+              GA_below=mean(GA_below),
+              G_better=GF_above + GA_below,
+              Points=sum(Points)) %>% 
+    arrange(desc(G_better), desc(Opp_GD)) %>% 
+    rename(`Opp Avg GF`=Opp_GF,
+           `Opp Avg GA`=Opp_GA,
+           `Opp Avg GD`=Opp_GD,
+           `GF above Opp Avg`=GF_above,
+           `GA below Opp Avg`=GA_below,
+           `GD above Avg`=G_better) %>% 
+    kable(format="html", digits=2, booktabs=T, align="lccccccc") %>% 
+    kable_styling()
+```
+
+Canada and Mexico are virtually tied at the top of the table after Canada's big win over Panama, which was the largest over expectation of any match to date.
+El Salvador has plummeted from top 4 to bottom 2 in the last three games.
+
+### Big Ugly Table
+
+Here's a big ugly table with all of the stats for all of the games, if you're interested:
+
+```{r all-results, message=FALSE, warning=FALSE}
+game_stats <- game_dat %>%
+    transmute(Date=lubridate::ymd(paste0("2021/", Date)),
+              Team=Home,
+              Opp=Away,
+              Place="Home",
+              GF=Home.Score,
+              GA=Away.Score) %>%
+    bind_rows(game_dat %>%
+                  transmute(Date=lubridate::ymd(paste0("2021/", Date)),
+                            Team=Away,
+                            Opp=Home,
+                            Place="Away",
+                            GF=Away.Score,
+                            GA=Home.Score)) %>%
+    group_by(Opp) %>%
+    mutate(GD=GF-GA,
+           Opp_GFpg=(sum(GA) - GA)/(n() - 1),
+           Opp_GApg=(sum(GF) - GF)/(n() - 1),
+           Opp_GDpg=Opp_GFpg-Opp_GApg) %>%
+    ungroup() %>%
+    mutate(GF_above=GF-Opp_GApg,
+           GA_below=Opp_GFpg-GA,
+           G_better=GF_above + GA_below,
+           Points=ifelse(GF > GA, 3,
+                         ifelse(GF==GA, 1, 0)))
+
+game_stats %>% 
+    arrange(Team, Date) %>% 
+    rename(Opponent=Opp,
+           `Opp Avg GF`=Opp_GFpg,
+           `Opp Avg GA`=Opp_GApg,
+           `Opp Avg GD`=Opp_GDpg,
+           `GF above Opp Avg`=GF_above,
+           `GA below Opp Avg`=GA_below,
+           `GD above Avg`=G_better) %>%
+    kable(format="html", digits=2, booktabs=T, align="llllcccccccc") %>% 
+    kable_styling() %>% 
+    row_spec(seq(GP, nrow(game_stats), GP), extra_css="border-bottom: 1px solid")
+```
+
+I'll try to make these all sortable in the future.
